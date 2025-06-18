@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, InfiniteScrollCustomEvent, IonList, IonItem, IonSkeletonText, IonAvatar, IonAlert, IonLabel, IonThumbnail } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, InfiniteScrollCustomEvent, IonList, IonItem, IonSkeletonText, IonAvatar, IonAlert, IonLabel, IonThumbnail, IonBadge } from '@ionic/angular/standalone';
 import { MovieService } from '../services/movie.service';
 import { catchError } from 'rxjs';
 import { MovieResult } from '../services/interfaces';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonSkeletonText, IonAvatar,  CommonModule, IonAlert, IonLabel, IonThumbnail, DatePipe,  RouterModule],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonSkeletonText, IonAvatar,  CommonModule, IonAlert, IonLabel, IonThumbnail, DatePipe,  RouterModule, IonBadge],
 })
 export class HomePage {
   private movieService = inject(MovieService);

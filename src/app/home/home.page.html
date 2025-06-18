@@ -16,7 +16,7 @@
     </ion-item>
   </ion-list >
   <ng-template #contentTemplate>
-    <ion-alert header="Error" [message] = "error" isOpen ="true" [buttons]="['Ok']"/>
+    <ion-alert header="Error" [message]="error" [isOpen]="!!error" [buttons]="['Ok']"></ion-alert>
   </ng-template>
 
   <ion-list>
@@ -27,8 +27,8 @@
       <ion-label class ="ion-text-wrap">
         <h3>{{ item.title }}</h3>
         <p>{{ item.release_date | date:'y'}}</p>
-
       </ion-label>
+      <ion-badge slot="end"> {{ item.vote_average }}</ion-badge>
     </ion-item>
   </ion-list>
 
