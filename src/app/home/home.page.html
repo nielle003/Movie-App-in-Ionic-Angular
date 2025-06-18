@@ -31,6 +31,8 @@
       <ion-badge slot="end"> {{ item.vote_average }}</ion-badge>
     </ion-item>
   </ion-list>
-
+  <ion-infinite-scroll (ionInfinite) = "loadMore($event)">
+  <ion-infinite-scroll-content loadingSpinner ="dots" loadingText ="Loading more data, Please wait." />
+  </ion-infinite-scroll>
 
 </ion-content>
